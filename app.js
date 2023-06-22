@@ -1,5 +1,7 @@
 const express=require('express');
 const app=express();
+//import members model
+const member=require('./Members')
 //import path
 const path=require('path');
 //create a port if not exist
@@ -10,7 +12,7 @@ const path=require('path');
 //Create an api
 app.get('/api/members',(req,res)=>
 {
-    res.json(members);
+    res.json(member);
 })
 //Create a static folder
 app.use(express.static(path.join(__dirname,'public')))
