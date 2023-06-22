@@ -14,13 +14,17 @@ const path=require('path');
 //Create a middleware
 
 //init middleware
-app.use(logger);
+//app.use(logger);
 
-//Create an api
+//Create an api to get all members
 app.get('/api/members',(req,res)=>
 {
     res.json(member);
-})
+});
+//Get a single member
+app.get('/api/members:id',(req,res)=>{
+res.json(member.filter(member=>member.id===parseInt(req.params.id)))
+});
 //Create a static folder
 app.use(express.static(path.join(__dirname,'public')))
 const port=process.env.PORT || 500;
