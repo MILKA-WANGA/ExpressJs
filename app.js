@@ -6,24 +6,7 @@ const path=require('path');
 // app.get("/",(req,res)=>{
 //   res.sendFile(path.join(__dirname,'public','index.html'));
 // })
-//Create an array
-const members=[
-    {
-        id:1,
-         name:"Milka",
-         status:"Active"
-    },
-    {
-         id:2,
-         name:"Wanga",
-         status:"Active"
-    },
-    {
-         id:3,
-         name:"Synthia",
-         status:"Active"
-    },
-];
+
 //Create an api
 app.get('/api/members',(req,res)=>
 {
