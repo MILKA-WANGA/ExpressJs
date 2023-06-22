@@ -9,23 +9,23 @@ const path=require('path');
 //Create an array
 const members=[
     {
-        "id":1,
-         "name":"Milka",
-         "status":"Active"
+        id:1,
+         name:"Milka",
+         status:"Active"
     },
     {
-        "id":2,
-         "name":"Wanga",
-         "status":"Active"
+         id:2,
+         name:"Wanga",
+         status:"Active"
     },
     {
-        "id":3,
-         "name":"Synthia",
-         "status":"Active"
-    }
+         id:3,
+         name:"Synthia",
+         status:"Active"
+    },
 ];
 //Create an api
-app.get("api/members",(req,res)=>
+app.get('/api/members',(req,res)=>
 {
     res.json(members);
 })
