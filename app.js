@@ -21,9 +21,19 @@ app.get('/api/members',(req,res)=>
 {
     res.json(member);
 });
+
 //Get a single member
 app.get('/api/members:id',(req,res)=>{
-res.json(member.filter(member=>member.id===parseInt(req.params.id)))
+    
+//Check if member exists
+const found=member.some(member=>member.id===parseInt(req.params.id))
+if(found){
+    res.json(member.filter(member=>member.id===parseInt(req.params.id)))
+}
+else{
+    res.status('400').json({msg:`member not found with id .${(req.params.id)}`})
+}
+
 });
 //Create a static folder
 app.use(express.static(path.join(__dirname,'public')))
