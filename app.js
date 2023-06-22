@@ -1,5 +1,7 @@
 const express=require('express');
 const app=express();
+//import moment module for date
+const moment = require('moment')
 //import members model
 const member=require('./Members')
 //import path
@@ -10,7 +12,7 @@ const path=require('path');
 // })
 //Create a middleware
 const logger=(req,res,next)=>{
-    console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}`);
+    console.log(`${req.protocol}://${req.get('host')}${req.originalUrl}.${moment()}.format`);
     next();
 }
 //init middleware
