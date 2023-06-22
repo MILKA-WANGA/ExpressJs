@@ -1,0 +1,22 @@
+{
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MILKA-WANGA/ExpressJs.git"
+  },
+  "author": "Milka Wanga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MILKA-WANGA/ExpressJs/issues"
+  },
+  "homepage": "https://github.com/MILKA-WANGA/ExpressJs#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
