@@ -8,6 +8,13 @@ const path=require('path');
 // app.get("/",(req,res)=>{
 //   res.sendFile(path.join(__dirname,'public','index.html'));
 // })
+//Create a middleware
+const logger=(req,res,next)=>{
+    console.log("Hello");
+    next();
+}
+//init middleware
+app.use(logger);
 
 //Create an api
 app.get('/api/members',(req,res)=>
